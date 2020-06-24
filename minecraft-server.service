@@ -1,0 +1,12 @@
+[Unit]
+Description=Minecraft Service
+After=rc-local.service
+[Service]
+WorkingDirectory=/usr/src/app
+ExecStart=/usr/bin/java -Xms12g -Xmx12g -jar /usr/src/app/server.jar
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+Alias=minecraft.service

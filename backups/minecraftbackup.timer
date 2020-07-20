@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for minecraft server backup
+
+[Timer]
+OnUnitActiveSec=172800s
+OnBootSec=10s
+
+[Install]
+WantedBy=timers.target

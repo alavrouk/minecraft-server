@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup Minecraft Server Docker Container
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/${USER}/minecraft-server/backups/backup.sh
